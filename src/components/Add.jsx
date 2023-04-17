@@ -65,7 +65,7 @@ const Add = () => {
           color={"text.primary"}
         >
           <Typography variant="h6" color="gray" textAlign="center">
-            Create Post
+            Create Your Post
           </Typography>
           <UserBox>
             <Avatar></Avatar>
