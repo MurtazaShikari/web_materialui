@@ -1,40 +1,21 @@
-import { Button, Typography } from "@mui/material";
-import { Add, Settings } from "@mui/icons-material";
+import { Box, Stack } from "@mui/material";
 import styled from "@emotion/styled";
+import Sidebar from "./components/Sidebar";
+import Rightbar from "./components/Rightbar";
+import Feed from "./components/Feed";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const BlueButton = styled(Button)({
-    backgroundColor: "skyblue",
-    color: "white",
-    margin: 5,
-    "&:hover": {
-      backgroundColor: "Green",
-    },
-  });
   return (
     <div className="App">
-      <Button variant="text">Text</Button>
-      <Button
-        startIcon={<Settings />}
-        variant="contained"
-        color="primary"
-        size="small"
-      >
-        Contained
-      </Button>
-      <Button
-        startIcon={<Add />}
-        variant="contained"
-        color="success"
-        size="small"
-      >
-        ADD NEW POST
-      </Button>
-      <Button variant="outlined" disabled>
-        Outlined
-      </Button>
-      <Typography variant="h1">It uses h1 style but it is p tag</Typography>;
-      <BlueButton>My Button</BlueButton>
+      <Box>
+        <Navbar />
+        <Stack direction="row" spacing={2} justifyContent="space-between">
+          <Sidebar />
+          <Feed />
+          <Rightbar />
+        </Stack>
+      </Box>
     </div>
   );
 }
