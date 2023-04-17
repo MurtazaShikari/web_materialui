@@ -1,6 +1,8 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Fab,
   Modal,
   Stack,
@@ -8,7 +10,14 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { Add as AddIcon, EmojiEmotions } from "@mui/icons-material";
+import {
+  Add as AddIcon,
+  DateRange,
+  EmojiEmotions,
+  Image,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 
@@ -50,9 +59,10 @@ const Add = () => {
         <Box
           width={400}
           height={300}
-          bgcolor="white"
           padding={3}
           borderRadius={5}
+          bgcolor={"background.default"}
+          color={"text.primary"}
         >
           <Typography variant="h6" color="gray" textAlign="center">
             Create Post
@@ -71,11 +81,21 @@ const Add = () => {
             variant="standard"
           />
           <Stack direction="row" gap={1} marginTop={2} marginBottom={2}>
-            <EmojiEmotions />
-            <EmojiEmotions />
-            <EmojiEmotions />
-            <EmojiEmotions />
+            <EmojiEmotions color="primary" />
+            <Image color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
           </Stack>
+          <ButtonGroup
+            fullWidth
+            variant="contained"
+            aria-label="outlined primary button group"
+          >
+            <Button>Post</Button>
+            <Button sx={{ width: "100" }}>
+              <DateRange />
+            </Button>
+          </ButtonGroup>
         </Box>
       </StyledModal>
     </>
