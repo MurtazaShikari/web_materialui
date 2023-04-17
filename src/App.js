@@ -1,9 +1,9 @@
 import { Box, Stack } from "@mui/material";
-import styled from "@emotion/styled";
 import Sidebar from "./components/Sidebar";
 import Rightbar from "./components/Rightbar";
 import Feed from "./components/Feed";
 import Navbar from "./components/Navbar";
+import Add from "./components/Add";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Feed />
           <Rightbar />
         </Stack>
+        <Add />
       </Box>
     </div>
   );
